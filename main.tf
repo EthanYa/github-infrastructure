@@ -26,3 +26,28 @@ resource "github_repository" "github-infrastructure" {
     "github"
   ]
 }
+
+resource "github_repository" "Yak-Yik" {
+  name = "Yak-Yik"
+  description = "Nodejs & React Practice"
+}
+
+resource "github_repository" "react-practice" {
+  name = "react-practice"
+  description = "some practice"
+}
+
+resource "github_repository" "nestjs-nats-streaming-transport" {
+  name = "nestjs-nats-streaming-transport"
+  description = "Nats Streaming Transport Module for NestJS"
+}
+
+resource "github_repository" "flutter_map" {
+  name = "flutter_map"
+  description = "A Flutter map widget inspired by Leaflet"
+}
+
+resource "github_repository" "LeaveSystem" {
+  name = "LeaveSystem"
+  description = "LeaveSystem for Java EE"
+}
