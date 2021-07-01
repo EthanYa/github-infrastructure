@@ -4,7 +4,7 @@ Use terraform to manage my GitHub repositories.
 
 ## Prerequisites
 
-## Installation
+- terraform >= 1.0.0
 
 ## Usage
 
