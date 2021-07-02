@@ -13,6 +13,6 @@ Use terraform to manage my GitHub repositories.
 ## TODO
 - [ ] write README and add badge
 - [x] integrate renovate
+- [x] use s3 to manage state
 - [ ] add Git Hooks   
-- [ ] use s3 to manage state
 - [ ] integrate GitHub Actions
