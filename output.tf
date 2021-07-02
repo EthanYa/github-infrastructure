@@ -1,6 +1,9 @@
 output "current_github_login" {
   value = data.github_user.current.login
 }
+output "aws_region" {
+  value = aws_s3_bucket.github-infrastructure-terraform-state.region
+}
 
 output "terraform_state_s3_bucket" {
   value = aws_s3_bucket.github-infrastructure-terraform-state.bucket

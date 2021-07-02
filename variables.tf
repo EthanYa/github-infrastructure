@@ -3,11 +3,6 @@ variable "token" {
   type        = string
 }
 
-variable "aws_region" {
-  type = string
-  default = "ap-northeast-1"
-}
-
 variable "aws_profile" {
   description = "aws cli profile"
   type        = string
