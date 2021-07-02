@@ -2,11 +2,11 @@ terraform {
   required_version = ">= 1.0.0"
 
   backend "s3" {
-    bucket = "github-infrastructure-terraform-state"
-    region = "ap-northeast-1"
-    key = "terraform.tfstate"
+    bucket         = "github-infrastructure-terraform-state"
+    region         = "ap-northeast-1"
+    key            = "terraform.tfstate"
     dynamodb_table = "github-infrastructure-terraform-state-locks"
-    encrypt = true
+    encrypt        = true
   }
   required_providers {
     github = {
@@ -56,10 +56,10 @@ data "github_user" "current" {
 }
 
 resource "github_repository" "github-infrastructure" {
-  name = "github-infrastructure"
-  description = "GitHub repositories configuration files"
+  name         = "github-infrastructure"
+  description  = "GitHub repositories configuration files"
   homepage_url = "https://github.com/EthanYa?tab=repositories"
-  has_issues = true
+  has_issues   = true
   has_projects = true
   topics = [
     "terraform",
@@ -69,36 +69,36 @@ resource "github_repository" "github-infrastructure" {
 }
 
 resource "github_repository" "Yak-Yik" {
-  name = "Yak-Yik"
-  description = "Nodejs & React Practice"
-  has_issues = true
+  name         = "Yak-Yik"
+  description  = "Nodejs & React Practice"
+  has_issues   = true
   has_projects = true
 }
 
 resource "github_repository" "react-practice" {
-  name = "react-practice"
-  description = "some practice"
-  has_issues = true
+  name         = "react-practice"
+  description  = "some practice"
+  has_issues   = true
   has_projects = true
 }
 
 resource "github_repository" "nestjs-nats-streaming-transport" {
-  name = "nestjs-nats-streaming-transport"
-  description = "Nats Streaming Transport Module for NestJS"
-  has_issues = true
+  name         = "nestjs-nats-streaming-transport"
+  description  = "Nats Streaming Transport Module for NestJS"
+  has_issues   = true
   has_projects = true
 }
 
 resource "github_repository" "flutter_map" {
-  name = "flutter_map"
-  description = "A Flutter map widget inspired by Leaflet"
-  has_issues = true
+  name         = "flutter_map"
+  description  = "A Flutter map widget inspired by Leaflet"
+  has_issues   = true
   has_projects = true
 }
 
 resource "github_repository" "LeaveSystem" {
-  name = "LeaveSystem"
-  description = "LeaveSystem for Java EE"
-  has_issues = true
+  name         = "LeaveSystem"
+  description  = "LeaveSystem for Java EE"
+  has_issues   = true
   has_projects = true
 }
