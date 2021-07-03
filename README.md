@@ -14,7 +14,6 @@ export TF_VAR_aws_region=AWS_RIGION
 
 terraform init -backend-config "region=$TF_VAR_aws_region"
 terraform apply 
-
 ```
 
 ## Author
