@@ -9,10 +9,11 @@ Use terraform to manage my GitHub repositories.
 ## Usage
 ```
 export AWS_PROFILE=YOUR_AWS_PROFILE
-export GITHUB_TOKEN=YOUR_GITHUB_TOKEN
+export TF_VAR_token=YOUR_GITHUB_TOKEN
+export TF_VAR_aws_region=AWS_RIGION
 
-terraform init
-terraform apply -var token=$GITHUB_TOKEN 
+terraform init -backend-config "region=$TF_VAR_aws_region"
+terraform apply 
 
 ```
 
