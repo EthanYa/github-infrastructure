@@ -2,8 +2,8 @@ terraform {
   required_version = ">= 1.0.0"
 
   backend "s3" {
-    bucket         = "github-infrastructure-terraform-state"
-    region         = "ap-northeast-1"
+    bucket = "github-infrastructure-terraform-state"
+    // region
     key            = "terraform.tfstate"
     dynamodb_table = "github-infrastructure-terraform-state-locks"
     encrypt        = true
@@ -16,7 +16,7 @@ terraform {
   }
 }
 provider "aws" {
-  region = "ap-northeast-1"
+  region = var.aws_region
 }
 
 resource "aws_s3_bucket" "github-infrastructure-terraform-state" {
