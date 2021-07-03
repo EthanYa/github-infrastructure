@@ -2,8 +2,8 @@ terraform {
   required_version = ">= 1.0.0"
 
   backend "s3" {
-    bucket = "github-infrastructure-terraform-state"
-    // region
+    //pass region via terraform init -backend-config "region=$TF_VAR_aws_region"
+    bucket         = "github-infrastructure-terraform-state"
     key            = "terraform.tfstate"
     dynamodb_table = "github-infrastructure-terraform-state-locks"
     encrypt        = true
