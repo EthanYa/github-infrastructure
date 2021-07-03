@@ -19,6 +19,9 @@ terraform apply
 
 ## Author
 
+**Ethan Yeh**
+- GitHub: [EthanYeh](https://github.com/EthanYa)
+
 ## TODO
 - [ ] write README and add badge
 - [x] integrate renovate
