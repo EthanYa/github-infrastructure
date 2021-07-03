@@ -57,7 +57,7 @@ data "github_user" "current" {
 
 resource "github_repository" "github-infrastructure" {
   name         = "github-infrastructure"
-  description  = "GitHub repositories configuration files"
+  description  = "My GitHub repositories configuration"
   homepage_url = "https://github.com/EthanYa?tab=repositories"
   has_issues   = true
   has_projects = true
