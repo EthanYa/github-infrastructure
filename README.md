@@ -7,6 +7,14 @@ Use terraform to manage my GitHub repositories.
 - terraform >= 1.0.0
 
 ## Usage
+```
+export AWS_PROFILE=YOUR_AWS_PROFILE
+export GITHUB_TOKEN=YOUR_GITHUB_TOKEN
+
+terraform init
+terraform apply -var token=$GITHUB_TOKEN 
+
+```
 
 ## Author
 
