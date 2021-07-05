@@ -6,18 +6,23 @@ Use terraform to manage my GitHub repositories.
 - terraform >= 1.0.0
 - git >= 2.9.0
 
-## Setup
-```
-git config core.hooksPath .githooks
-```
-
 ## Usage
+
+- prepare env, make sure all env loaded
 ```
 export AWS_PROFILE=YOUR_AWS_PROFILE
 export TF_VAR_token=YOUR_GITHUB_TOKEN
 export TF_VAR_aws_region=AWS_RIGION
+```
 
+- init project
+```
+make init
 terraform init -backend-config "region=$TF_VAR_aws_region"
+```
+
+- apply changes
+```
 terraform apply 
 ```
 
@@ -31,5 +36,5 @@ terraform apply
 - [x] integrate renovate
 - [x] use s3 to manage state
 - [x] add Git Hooks
-- [ ] add Makefile
+- [X] add Makefile
 - [ ] integrate GitHub Actions
