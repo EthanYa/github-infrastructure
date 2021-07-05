@@ -4,6 +4,7 @@ Use terraform to manage my GitHub repositories.
 
 ## Prerequisites
 - terraform >= 1.0.0
+- aws-cli >= 2.0.0
 - git >= 2.9.0
 
 ## Usage
