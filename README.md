@@ -1,4 +1,5 @@
 # github-infrastructure
+[![Terraform](https://github.com/EthanYa/github-infrastructure/actions/workflows/terraform.yml/badge.svg?branch=master)](https://github.com/EthanYa/github-infrastructure/actions/workflows/terraform.yml)
 
 Use terraform to manage my GitHub repositories.
 
@@ -13,7 +14,7 @@ Use terraform to manage my GitHub repositories.
 ```
 export AWS_PROFILE=YOUR_AWS_PROFILE
 export TF_VAR_token=YOUR_GITHUB_TOKEN
-export TF_VAR_aws_region=AWS_RIGION
+export TF_VAR_aws_region=AWS_REGION
 ```
 
 - init project
@@ -33,9 +34,8 @@ terraform apply
 - GitHub: [EthanYeh](https://github.com/EthanYa)
 
 ## TODO
-- [ ] write README and add badge
 - [x] integrate renovate
 - [x] use s3 to manage state
 - [x] add Git Hooks
 - [X] add Makefile
-- [ ] integrate GitHub Actions
+- [X] integrate GitHub Actions
