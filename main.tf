@@ -59,6 +59,17 @@ data "github_user" "current" {
   username = ""
 }
 
+resource "github_repository" "dotfiles" {
+  name         = "dotfiles"
+  description  = "My macOS dotfiles"
+  has_issues   = true
+  has_projects = true
+  topics = [
+    "dotfiles",
+    "dotbot"
+  ]
+}
+
 resource "github_repository" "github-infrastructure" {
   name         = "github-infrastructure"
   description  = "My GitHub repositories configuration"
