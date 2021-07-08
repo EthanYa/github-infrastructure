@@ -60,10 +60,12 @@ data "github_user" "current" {
 }
 
 resource "github_repository" "dotfiles" {
-  name         = "dotfiles"
-  description  = "My macOS dotfiles"
-  has_issues   = true
-  has_projects = true
+  name             = "dotfiles"
+  description      = "My macOS dotfiles"
+  has_issues       = true
+  has_projects     = true
+  auto_init        = true
+  license_template = "mit"
   topics = [
     "dotfiles",
     "dotbot"
@@ -71,11 +73,13 @@ resource "github_repository" "dotfiles" {
 }
 
 resource "github_repository" "github-infrastructure" {
-  name         = "github-infrastructure"
-  description  = "My GitHub repositories configuration"
-  homepage_url = "https://github.com/EthanYa?tab=repositories"
-  has_issues   = true
-  has_projects = true
+  name             = "github-infrastructure"
+  description      = "My GitHub repositories configuration"
+  homepage_url     = "https://github.com/EthanYa?tab=repositories"
+  has_issues       = true
+  has_projects     = true
+  auto_init        = true
+  license_template = "mit"
   topics = [
     "terraform",
     "infrastructure-as-code",
