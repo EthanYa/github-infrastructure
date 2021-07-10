@@ -59,6 +59,10 @@ data "github_user" "current" {
   username = ""
 }
 
+resource "github_user_gpg_key" "github_user_gpg_key" {
+  armored_public_key = var.github_user_gpg_key
+}
+
 resource "github_repository" "dotfiles" {
   name             = "dotfiles"
   description      = "My macOS dotfiles"
