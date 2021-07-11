@@ -59,6 +59,13 @@ data "github_user" "current" {
   username = ""
 }
 
+resource "github_user_ssh_key" "github_user_ssh_keys" {
+  for_each = var.github_user_ssh_keys
+
+  title = each.key
+  key   = each.value
+}
+
 resource "github_user_gpg_key" "github_user_gpg_key" {
   armored_public_key = var.github_user_gpg_key
 }

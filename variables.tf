@@ -7,6 +7,10 @@ variable "aws_region" {
   type = string
 }
 
+variable "github_user_ssh_keys" {
+  type = map(string)
+}
+
 variable "github_user_gpg_key" {
   type = string
 }
