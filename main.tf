@@ -70,6 +70,10 @@ resource "github_user_gpg_key" "github_user_gpg_key" {
   armored_public_key = var.github_user_gpg_key
 }
 
+resource "github_user_gpg_key" "token_bricks_github_user_gpg_key" {
+  armored_public_key = var.token_bricks_github_user_gpg_key
+}
+
 resource "github_repository" "dotfiles" {
   name             = "dotfiles"
   description      = "My macOS dotfiles"

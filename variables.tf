@@ -14,3 +14,7 @@ variable "github_user_ssh_keys" {
 variable "github_user_gpg_key" {
   type = string
 }
+
+variable "token_bricks_github_user_gpg_key" {
+  type = string
+}
