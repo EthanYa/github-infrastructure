@@ -115,20 +115,6 @@ resource "github_repository" "github-infrastructure" {
   ]
 }
 
-resource "github_repository" "Yak-Yik" {
-  name         = "Yak-Yik"
-  description  = "Nodejs & React Practice"
-  has_issues   = true
-  has_projects = true
-}
-
-resource "github_repository" "react-practice" {
-  name         = "react-practice"
-  description  = "some practice"
-  has_issues   = true
-  has_projects = true
-}
-
 resource "github_repository" "nestjs-nats-streaming-transport" {
   name         = "nestjs-nats-streaming-transport"
   description  = "Nats Streaming Transport Module for NestJS"
@@ -143,9 +129,26 @@ resource "github_repository" "flutter_map" {
   has_projects = true
 }
 
+resource "github_repository" "Yak-Yik" {
+  name         = "Yak-Yik"
+  description  = "Nodejs & React Practice"
+  has_issues   = true
+  has_projects = true
+  visibility   = "private"
+}
+
+resource "github_repository" "react-practice" {
+  name         = "react-practice"
+  description  = "some practice"
+  has_issues   = true
+  has_projects = true
+  visibility   = "private"
+}
+
 resource "github_repository" "LeaveSystem" {
   name         = "LeaveSystem"
   description  = "LeaveSystem for Java EE"
   has_issues   = true
   has_projects = true
+  visibility   = "private"
 }
