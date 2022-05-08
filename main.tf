@@ -75,12 +75,13 @@ resource "github_user_gpg_key" "token_bricks_github_user_gpg_key" {
 }
 
 resource "github_repository" "dotfiles" {
-  name             = "dotfiles"
+  name             = "dotfiles-deprecated"
   description      = "My macOS dotfiles"
   has_issues       = true
   has_projects     = true
   auto_init        = true
   license_template = "mit"
+  visibility       = "private"
   topics = [
     "dotfiles",
     "dotbot"
