@@ -11,20 +11,26 @@ Use terraform to manage my GitHub repositories.
 ## Usage
 
 - prepare env, make sure all env loaded
-```
+```shell
 export AWS_PROFILE=YOUR_AWS_PROFILE
 export TF_VAR_token=YOUR_GITHUB_TOKEN
 export TF_VAR_aws_region=AWS_REGION
 ```
+- my env
+```shell
+export AWS_PROFILE=ethan.yeh
+export TF_VAR_token=$(bw get item 9dcefa5f-d970-4993-bf4e-aed200a36949 | jq -r '.fields[0].value')
+export TF_VAR_aws_region=ap-northeast-1
+```
 
 - init project
-```
+```shell
 make init
 terraform init -backend-config "region=$TF_VAR_aws_region"
 ```
 
 - apply changes
-```
+```shell
 terraform apply 
 ```
 
