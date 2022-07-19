@@ -11,10 +11,10 @@ variable "github_user_ssh_keys" {
   type = map(string)
 }
 
-variable "github_user_gpg_key" {
-  type = string
+variable "personal_github_user_gpg_keys" {
+  type = map(string)
 }
 
-variable "token_bricks_github_user_gpg_key" {
-  type = string
+variable "token_bricks_github_user_gpg_keys" {
+  type = map(string)
 }

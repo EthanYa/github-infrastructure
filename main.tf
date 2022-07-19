@@ -66,12 +66,16 @@ resource "github_user_ssh_key" "github_user_ssh_keys" {
   key   = each.value
 }
 
-resource "github_user_gpg_key" "github_user_gpg_key" {
-  armored_public_key = var.github_user_gpg_key
+resource "github_user_gpg_key" "personal_github_user_gpg_keys" {
+  for_each = var.personal_github_user_gpg_keys
+
+  armored_public_key = each.value
 }
 
-resource "github_user_gpg_key" "token_bricks_github_user_gpg_key" {
-  armored_public_key = var.token_bricks_github_user_gpg_key
+resource "github_user_gpg_key" "token_bricks_github_user_gpg_keys" {
+  for_each = var.token_bricks_github_user_gpg_keys
+
+  armored_public_key = each.value
 }
 resource "github_repository" "dotfiles-chezmoi" {
   name             = "dotfiles"
