@@ -115,6 +115,7 @@ resource "github_repository" "github-infrastructure" {
   topics = [
     "terraform",
     "infrastructure-as-code",
+    "IaC",
     "github"
   ]
 }
