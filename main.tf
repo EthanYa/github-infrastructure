@@ -100,7 +100,8 @@ resource "github_repository" "dotfiles" {
   visibility       = "private"
   topics = [
     "dotfiles",
-    "dotbot"
+    "dotbot",
+    "macos"
   ]
 }
 
@@ -115,7 +116,6 @@ resource "github_repository" "github-infrastructure" {
   topics = [
     "terraform",
     "infrastructure-as-code",
-    "IaC",
     "github"
   ]
 }
