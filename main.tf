@@ -86,7 +86,8 @@ resource "github_repository" "dotfiles-chezmoi" {
   license_template = "mit"
   topics = [
     "dotfiles",
-    "chezmoi"
+    "chezmoi",
+    "macos"
   ]
 }
 
@@ -100,8 +101,7 @@ resource "github_repository" "dotfiles" {
   visibility       = "private"
   topics = [
     "dotfiles",
-    "dotbot",
-    "macos"
+    "dotbot"
   ]
 }
 
