@@ -120,6 +120,15 @@ resource "github_repository" "github-infrastructure" {
   ]
 }
 
+resource "github_repository" "crypto-insight" {
+  name         = "crypto-insight"
+  description  = "Crypto Insight"
+  has_issues   = true
+  has_projects = true
+  auto_init    = false
+  visibility   = "private"
+}
+
 resource "github_repository" "nestjs-nats-streaming-transport" {
   name         = "nestjs-nats-streaming-transport"
   description  = "Nats Streaming Transport Module for NestJS"
